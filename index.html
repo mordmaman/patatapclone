@@ -4,18 +4,21 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.22/paper.min.js"></script>
-    <script src="scripts.js"></script>
+    <!--/*<script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.22/paper.min.js"></script>*/-->
+    <!--/*<script src="scripts.js"></script>*/-->
     <!--<script type="text/paperscript" src="scripts.js" canvas="myCanvas"></script>-->
+    <script type="text/javascript" src="paper-full.min.js"></script>
     <script type="text/paperscript" canvas="myCanvas">
-
-        for(var x=0; x< 1000; x+=100){
-            for(var y=0; y< 1000; y+=100){
-                new Path.Circle(new Point(x, y), 10).fillColor="yellow";
-        }
+    function onKeyDown(event) {
+        new Path.Circle(new Point(100,100), 10).fillColor="yellow";
+        <!--var maxPoint = new Point(view.size.width, view,size.height);
+        var randomPoint = Point.random();
+        var point = maxPoint * RandomPoint;
+        console.log(point);
+        new Path.Circle(point, 10).fillColor = "orange";-->
     }
 	
-</script>
+    </script>
 </head>
 <body>
     <canvas id="myCanvas" resize></canvas>
